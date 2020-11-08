@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo:400,700|Open+Sans:400,700');
+ion-slides {
+    height: 35%;
+}
+
+.card-cust {
+    position: relative;
+    text-align: center;
+}
+
+.card-title {
+    position: absolute;
+    top: 36%;
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+}
+
+.card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    top: 52%;
+    width: 100%;
+    color: #fff;
+}
+
+
+/*================*/
+
+a {
+    color: inherit;
+}
+
+.card {
+    font-family: 'Heebo';
+    --bg-filter-opacity: 0.5;
+    background-image: linear-gradient(rgba(44, 65, 241, var(--bg-filter-opacity)), rgba(44, 65, 241, var(--bg-filter-opacity))), var(--bg-img);
+    height: 10em;
+    width: 100%;
+    font-size: 1.5em;
+    color: white;
+    border-radius: 0.4em;
+    -webkit-box-shadow: 4px 2px 8px 3px rgba(186, 186, 186, 0.72);
+    box-shadow: 4px 2px 8px 3px rgba(186, 186, 186, 0.72);
+    padding: 1em;
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    transition: all, var(--transition-time);
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.card h1 {
+    margin: 0;
+    font-size: 1.5em;
+    line-height: 1.2em;
+}
+
+.card p {
+    font-size: 0.75em;
+    font-family: 'Open Sans';
+    // margin-top: 0.5em;
+    // line-height: 2em;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1285px) {
+    .card {
+        max-width: calc(100vw - 2rem);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .card {
+        max-width: calc(100vw - 2rem);
+    }
+}
