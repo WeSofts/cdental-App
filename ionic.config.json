@@ -1,0 +1,7 @@
+{
+  "name": "cdental-App",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
