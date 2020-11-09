@@ -1,0 +1,21 @@
+<ion-header [translucent]="true" class="ion-no-border">
+    <ion-toolbar>
+        <ion-title>Recupera tu contraseña</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <img src="/assets/img/logo-blue.png" />
+    <form #form="ngForm" (ngSubmit)="login(form)" method="POST">
+        <ion-item style="padding: 5px;">
+            <ion-label position="floating">Ingresa tu correo electronico</ion-label>
+            <ion-input type="email" ngModel name="correo" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" required>
+            </ion-input>
+        </ion-item>
+        <ion-button type="submit" expand="block">Recupera tu contraseña</ion-button>
+    </form>
+
+    <h3 style="font-weight: 700; display: flex; justify-content: center; align-self: center; align-items: cente ;margin:10%;">Espera!</h3>
+    <h5 style="margin-left: 25px; margin-right: 25px; text-align: center;">En un momento recibiras un correo de nosotros, esto puede tardar algunos segundos</h5>
+
+</ion-content>
