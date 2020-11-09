@@ -6,7 +6,7 @@
 
 <ion-content class="ion-padding">
     <img src="/assets/img/logo-blue.png" />
-    <form #form="ngForm" (ngSubmit)="login(form)" method="POST">
+    <form #form="ngForm" (ngSubmit)="recovery(form)" method="POST">
         <ion-item style="padding: 5px;">
             <ion-label position="floating">Ingresa tu correo electronico</ion-label>
             <ion-input type="email" ngModel name="correo" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" required>

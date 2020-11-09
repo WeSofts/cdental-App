@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AlertController, LoadingController } from '@ionic/angular';
+import { RecoveryService } from '../../services/recovery.service';
 
 @Component({
   selector: 'app-register',
@@ -12,18 +13,19 @@ export class RegisterPage implements OnInit {
   constructor(
     public loadingController: LoadingController,
     public alertController: AlertController,
+    private recoveryService:RecoveryService,
   ) {
    }
 
   ngOnInit() {
   }
 
-  async login(form: NgForm) {
-    const loading = await this.loadingController.create({
-      cssClass: 'my-custom-class',
-      message: 'Iniciando sesión...',
-      duration: 1000
-    });
+  async recovery(form: NgForm) {
+    this.recoveryService.recuperarContraseña(form.value.correo).subscribe(data =>{ console.log(data) }, error =>{ console.log(error) });
+    }
 
-}
+
+
+
+
 }
