@@ -1,23 +1,28 @@
-<ion-header [translucent]="true" class="ion-no-border">
+<!-- <ion-header [translucent]="true" class="ion-no-border">
     <ion-toolbar>
         <ion-title>Inicio de sesión</ion-title>
     </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content class="ion-padding">
-    <img [src]="logoBlue" />
-    <form #form="ngForm" (ngSubmit)="login(form)" method="POST">
-        <ion-item style="padding: 5px;">
-            <ion-label position="floating">Correo</ion-label>
-            <ion-input type="email" ngModel name="correo" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" required>
-            </ion-input>
-        </ion-item>
-        <ion-item style="padding: 5px;">
-            <ion-label position="floating">Contraseña</ion-label>
-            <ion-input type="password" ngModel name="contrasena" required>
-            </ion-input>
-        </ion-item>
-        <a [routerLink]="['/register']" style="font-size: small; margin-bottom: 5px;" text-right>¿Olvidaste tu contraseña?</a>
-        <ion-button type="submit" expand="block" disabled="{{!form.valid}}">Iniciar sesión</ion-button>
-    </form>
+    <div style="justify-content: flex-end;
+                align-content: flex-end;">
+        <img [src]="logoBlue" />
+        <form #form="ngForm" (ngSubmit)="login(form)" method="POST">
+            <ion-item style="padding: 5px;">
+                <ion-label position="floating">Correo</ion-label>
+                <ion-input type="email" ngModel name="correo" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" required>
+                </ion-input>
+            </ion-item>
+            <ion-item style="padding: 5px;">
+                <ion-label position="floating">Contraseña</ion-label>
+                <ion-input type="password" ngModel name="contrasena" required>
+                </ion-input>
+            </ion-item>
+            <div style="width: 100%; display: flex; justify-content: flex-end; margin-bottom: 20px; margin-top: 5px;">
+                <a [routerLink]="['/register']" style="font-size: small; margin-bottom: 5px;" text-right>¿Olvidaste tu contraseña?</a>
+            </div>
+            <ion-button type="submit" expand="block" disabled="{{!form.valid}}">Iniciar sesión</ion-button>
+        </form>
+    </div>
 </ion-content>
