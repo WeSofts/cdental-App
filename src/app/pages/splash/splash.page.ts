@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SplashPageModule } from './splash.module';
 
 @Component({
   selector: 'app-splash',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SplashPage implements OnInit {
 
+  SplashPage = true;
   constructor() { }
 
   ngOnInit() {
