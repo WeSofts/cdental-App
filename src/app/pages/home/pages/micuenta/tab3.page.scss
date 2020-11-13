@@ -1,0 +1,22 @@
+.porfile-content {
+    background-color: rgb(237, 237, 252);
+    height: 40%;
+    width: 90%;
+    border-radius: 0em 3em 3em 0em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.user-info {
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.porfile-img {
+    margin-right: 15px;
+}

@@ -10,10 +10,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { PopupinfoComponent } from './components/popupinfo/popupinfo.component';
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+  declarations: [AppComponent, PopupinfoComponent],
+  entryComponents: [PopupinfoComponent],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
