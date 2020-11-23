@@ -43,6 +43,7 @@ export class LoginPage implements OnInit {
         } else {
           localStorage.setItem('session-data', JSON.stringify(data.usuario));
           this.router.navigateByUrl('/');
+          window.location.reload();
         }
       }, err => {
         console.log(err);
